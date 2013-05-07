@@ -1,0 +1,34 @@
+{
+        "manifest_version": 2,
+	"name": "Downloadify",
+	"version": "0.1",
+	"description": "Download every spotify song for free",
+        "icons": {  "16" : "icon_16.png",
+                    "48" : "icon_48.png",
+                    "64" : "icon_64.png",
+                    "128": "icon_128.png" },
+	"permissions":[ 
+		  "*://*.cloudfront.net/*",
+                  "webRequest",
+                  "webRequestBlocking",
+                  "tabs"
+	],
+        "background": {
+          "scripts": ["javascripts/background.js"]
+        },
+	"content_security_policy": "script-src 'self'; object-src 'self' https://*.cloudfront.net/",  
+	"content_scripts": [
+		{
+			"matches": [
+                                "*://play.spotify.com/*"
+			],
+			"css": [
+				"styles/inject.css"
+			],
+			"js": [
+				"javascripts/inject.js"
+			],
+                        "all_frames" : true
+		}
+	]
+}
