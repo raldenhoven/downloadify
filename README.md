@@ -1,18 +1,8 @@
 downloadify
 ===========
 
-So spotify made a great html5 player for their service: https://play.spotify.com
-But they forgot their encription... NICE! :)
+Wow... did not think i would get this much coverage. And to be honest I am glad it was fixed with warp speed by the good guys at Spotify!
 
-!!!!!!!!!!!!DISCLAIMER!!!!!!!!!!!!!!
+So why did I put this on Github en kept it up? I did not think anybody still wanted to download music, I mean streaming / the cloud is the shit. And I found it strange nobody in about six months wrote anything about the lack of security on part of Spotify.
 
-Hey I don't like encription but love spotify, just pay them for your content and I am sure
-they fix it soon ( like create a corrupted mp3 and fix it with the html5 file api ).
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-Install the extension
-
-https://chrome.google.com/webstore/detail/downloadify/femggkppepeoihnolcfenmkfgekffihm
-
-Go to https://play.spotify.com play a song and watch your download folder!
+!!!!!!!!!!!!!!!!!!! TL;DR; THIS DOES NOT WORK ANYMORE !!!!!!!!!!!!!!!!!!!!!!!!!!!
