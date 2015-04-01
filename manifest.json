@@ -1,32 +1,41 @@
 {
         "manifest_version": 2,
-	"name": "Downloadify",
+	"name": "tidalWave",
 	"version": "0.1",
-	"description": "Download every spotify song for free",
+	"description": "TIDAL HiFi downloads",
         "icons": {  "16" : "icon_16.png",
                     "48" : "icon_48.png",
                     "64" : "icon_64.png",
                     "128": "icon_128.png" },
-	"permissions":[ 
-		  "*://*.cloudfront.net/*",
+	"permissions":[
+		  "*://audio-pop.tidal.com/*",
                   "webRequest",
+                  "webRequestBlocking",
+                  "tabs",
+
+          "*://api.tidalhifi.com/v1/tracks/*",
+          		  "webRequest",
                   "webRequestBlocking",
                   "tabs"
 	],
-        "background": {
+
+    "background": {
           "scripts": ["javascripts/background.js"]
-        },
-	"content_security_policy": "script-src 'self'; object-src 'self' https://*.cloudfront.net/",  
+    },
+
+	"content_security_policy": "script-src 'self'; object-src 'self' https://api.tidalhifi.com/ https://audio-pop.tidal.com/",
+
 	"content_scripts": [
 		{
 			"matches": [
-                                "*://play.spotify.com/*"
+                                "*://listen.tidalhifi.com/*"
 			],
 			"css": [
 				"styles/inject.css"
 			],
 			"js": [
-				"javascripts/inject.js"
+				"javascripts/inject.js",
+				"javascripts/jquery.js"
 			],
                         "all_frames" : true
 		}
