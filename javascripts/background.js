@@ -10,7 +10,7 @@ var downloadSong = function(url, tabid){
 }
 
 var findmp3 = function(details){
-  if( details.url.indexOf("cloudfront.net/mp3/") === -1 && downloads.indexOf(details.url) ) return;
+  if( details.url.indexOf("cloudfront.net/mp3enc/") === -1 && downloads.indexOf(details.url) ) return;
   
   downloadSong(details.url, details.tabId)
 };
@@ -18,7 +18,7 @@ var findmp3 = function(details){
 var startListener = function(){
   chrome.webRequest.onBeforeRequest.addListener(
     findmp3,
-    {urls: ["*://*.cloudfront.net/mp3/*"]},
+    {urls: ["*://*.cloudfront.net/mp3enc/*"]},
     ['blocking']
   );
 };
